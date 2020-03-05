@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Quiz</title>
+
+
+</head>
+
+<body>
+    <h1>Welcome the JavaScript Test</h1>
+
+    <script type="text/javascript">
+        var questions = [{
+            prompt: "Which extension is used on the file which has the content?\n(a) html\n\(b) css\n(c) js \n(d) NA",
+            answer: "a"
+        }, {
+            prompt: "Which extension is used on the file styles the content?\n(a) html\n\(b) css\n(c) js \n(d) NA",
+            answer: "b"
+        }, {
+            prompt: "Which extension is used on the file which adds Interactivity?\n(a) html\n(b) css\n(c) js \n(d) NA",
+            answer: "c"
+        }, {
+            prompt: "What of the following means Non Applicable?\n(a) html\n(b) css\n(c) js \n(d) NA",
+            answer: "d"
+        }];
+        var score = 0;
+
+        for (var i = 0; i < questions.length; i++) {
+            var response = window.prompt(questions[i].prompt);
+            if (response == questions[i].answer) {
+                score++;
+                alert("Correct  well Done!");
+            } else {
+                alert("Sorry that is WRONG!  nice Try");
+            }
+        }
+        alert("Your score was " + score + "/" + questions.length);
+
+        if (score > 2) {
+            document.write("<h1>You passed the quiz with " + score + " out of 4 </h1>");
+        } else {
+            document.write("<h1>Your score " + score + " out of 4 is not good enough</h1>");
+        }
+
+        document.write("<hr>");
+        document.write("<p>This was a sample quiz from a javascript tutorial</p>");
+
+        alert("Quiz is now completed");
+        console.log("Logging to the console");
+    </script>
+
+
+    <h4> <a href="https://www.mikedane.com/web-development/javascript/building-a-quiz/">Mike Dane Channel on JavaScript</a></h4>
+</body>
+
+</html>
